@@ -1,8 +1,14 @@
+const { useState } = React;
+
 
 const Route       = ReactRouterDOM.Route;
 const Link        = ReactRouterDOM.Link;
 const HashRouter  = ReactRouterDOM.HashRouter;
 const UserContext = React.createContext(null);
+const UserSubmissions = React.createContext({
+  submissions: [],
+  addSubmission: () => {},
+});
 
 function Card(props){
     function classes(){
