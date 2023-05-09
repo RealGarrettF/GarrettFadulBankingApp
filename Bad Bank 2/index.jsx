@@ -1,8 +1,30 @@
 
-function Spa() {
-  const [submissions, setSubmissions] = useState([{accounts: [" "], deposits: [" "], withdraws: [" "]}]);
-  const [users, setUsers] = useState([{name: 'guest',email:'guest@gmail.com',password:'guest',balance:0}]);
 
+function Spa() {
+  const [submissions, setSubmissions] = useState({
+    accounts: [],
+    deposits: [],
+    withdraws: [],
+  });
+  const [users, setUsers] = useState([
+    {
+      name: "guest",
+      email: "guest@gmail.com",
+      password: "guest",
+      balance: 0,
+    }
+  ]);
+
+  React.useEffect(() => {
+    users.map((user) => {
+      setSubmissions((prev) => {
+        return {
+          ...prev,
+          accounts: [...prev.accounts, user.name],
+        };
+      });
+    });
+  }, []);
 
   return (
     <HashRouter>
@@ -23,9 +45,4 @@ function Spa() {
   );
 }
 
-ReactDOM.render(
-  <Spa/>,
-  document.getElementById('root')
-
-
-);
+ReactDOM.render(<Spa />, document.getElementById("root"));
