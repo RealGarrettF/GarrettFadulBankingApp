@@ -4,41 +4,10 @@ function AllData() {
   const sctx = React.useContext(UserSubmissions);
   const { users, setUsers } = ctx;
   const { submissions, setSubmissions } = sctx;
-  // const allUsers = ctx.users
-  //   .map(
-  //     (user) =>
-  //       `Name: ${user.name}, Email: ${user.email}, Password: ${
-  //         user.password
-  //       }, Balance: ${user.balance.toString()}\n\n`
-  //   )
-  //   .join("");
-  // Create a string of all the users' information
 
-  // const allSubmissions = sctx.submissions
-  //   .map((submission) => {
-  //     const accountInfo = submission.accounts.join(", ");
-  //     const depositInfo = submission.deposits.join(", ");
-  //     const withdrawInfo = submission.withdraws.join(", ");
-
-  //     return `Accounts added: ${accountInfo} \nDeposits made: ${depositInfo} \nWithdraws made: ${withdrawInfo}`;
-  //   })
-  //   .join("\n\n");
 
   {
-    /* <Card
-    txtcolor="black"
-    header="Users"
-    bgcolor="primary"
-    title="Accounts created & balances"
-    body={<div style={{ whiteSpace: "pre-line" }}>{allUsers}</div>}
-  />
-  <Card
-    txtcolor="black"
-    header="All Submissions"
-    bgcolor="primary"
-    title="All Submissions made"
-    body={<div style={{ whiteSpace: "pre-line" }}>{allSubmissions}</div>}
-  /> */
+
   }
   return (
     <div>

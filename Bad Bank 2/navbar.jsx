@@ -28,6 +28,9 @@ function NavBar() {
             </li>
             <li className={`nav-item ${location.pathname === '/alldata/' ? 'active' : ''}`}>
               <a className="nav-link" href="#/alldata/" title="View all data" >All Data</a>
+            </li>
+            <li className={`nav-item ${location.pathname === '/login/' ? 'active' : ''}`}>
+              <a className="nav-link" href="#/login/" title="Login here" >Login</a>
             </li>          
           </ul>
         </div>

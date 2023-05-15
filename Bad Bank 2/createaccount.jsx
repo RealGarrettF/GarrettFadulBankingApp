@@ -9,12 +9,23 @@ function CreateAccount() {
     balance: 0,
   });
 
+
   function onChange(event) {
     const { name, value } = event.target;
     setDataFields((currentState) => ({
       ...currentState,
       [name]: value,
     }));
+  }
+
+  function checkSubmit() {
+    if (!dataFields.name && !dataFields.email && !dataFields.password) {
+      return true;
+    }
+    else {
+      return false;
+    }
+
   }
 
   function handleSubmit(event) {
@@ -78,6 +89,7 @@ function CreateAccount() {
           />
           <input
             type="submit"
+            disabled = {checkSubmit()}
             value={
               ctx.users.length >= 2
                 ? "Create another account"
